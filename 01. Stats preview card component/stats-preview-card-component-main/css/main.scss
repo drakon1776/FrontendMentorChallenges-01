@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(233, 47%, 7%);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 0.5fr auto;
+
+  border-radius: 10px;
+  background-color: hsl(244, 38%, 16%);
+
+  margin: 20% 5%;
+
+  @media (min-width: 960px) {
+    grid-template-columns: 2fr auto;
+
+    margin: 10% 15%;
+    padding: 0;
+  }
+}
+
+.img {
+  border-radius: 10px 10px 0 0;
+  background-color: hsl(277, 64%, 75%);
+  background-blend-mode: multiply;
+  background-image: url(../images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  min-height: 15em;
+
+  @media (min-width: 960px) {
+    background-image: url(../images/image-header-desktop.jpg);
+
+    width: 450px;
+    max-height: 100%;
+    min-width: 100%;
+    grid-column: 2 /3;
+    grid-row: 1 / 3;
+
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 1em;
+
+  @media (min-width: 960px) {
+    align-items: flex-start;
+
+    padding: 1em 5em 1em 4em;
+  }
+
+  .title {
+    font-family: Lexend Deca;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+
+    padding: 1em 0 1em 0;
+
+    span {
+      color: hsl(277, 64%, 61%);
+    }
+
+    p {
+      line-height: 1.6em;
+      font-weight: 400;
+      color: hsla(0, 0%, 100%, 0.75);
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 960px) {
+      text-align: left;
+      padding: 3em 0 3em 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    font-family: Inter;
+
+    padding-top: 2em;
+
+    h2 {
+      color: white;
+      margin: 0;
+    }
+
+    p {
+      text-transform: uppercase;
+      color: hsla(0, 0%, 100%, 0.6);
+      margin: 0;
+      padding-top: 0.6em;
+      padding-bottom: 2em;
+    }
+
+    @media (min-width: 960px) {
+      flex-direction: row;
+      gap: 3em;
+      text-align: left;
+    }
+  }
+}
